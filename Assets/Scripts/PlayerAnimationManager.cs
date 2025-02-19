@@ -21,11 +21,21 @@ public class PlayerAnimatorController : MonoBehaviour
     public void Update()
     {
         animator.SetFloat("CharacterSpeed", rb.velocity.magnitude);
-        animator.SetBool("IsGrounded", movement.IsGrounded);
+        
+        animator.SetBool("IsFalling", !movement.IsGrounded);
+
+        // animator.SetBool("IsGrounded", movement.IsGrounded);
        
         if (Input.GetButtonUp("Fire1"))
         {
             animator.SetTrigger("doRoll");
         }
+        
+        if(Input.GetButtonUp("Fire2")) 
+        {
+            animator.SetTrigger("doPunch");
+        }
+    
+
     }
 }
