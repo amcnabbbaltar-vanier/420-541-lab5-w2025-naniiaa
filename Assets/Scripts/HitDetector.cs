@@ -12,7 +12,7 @@ public class HitDetector : MonoBehaviour
             if(enemyController != null) 
             {
                 enemyController.GotHit();
-            }*/
+            } */
 
         }
     }
